@@ -4,6 +4,9 @@ lock "~> 3.11.0"
 set :application, "dev_blogs"
 set :repo_url, "git@github.com:nashi24/dev_blogs.git"
 
+set :user, 'deploy'
+
+
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
